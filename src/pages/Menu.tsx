@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChefHat } from 'lucide-react';
 
 export const Menu: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'starters' | 'mains' | 'desserts'>('starters');
-
+      useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const menuItems = {
     starters: [
       { name: 'Proin gravida gravida', price: '$10.50', desc: 'Lorem ipsum dolor sit amet purus vitae libero lacinia accumsan vitae, dapibus et.', image: 'https://images.unsplash.com/photo-1541014741259-de529411b96a?w=200&q=80' },

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, ArrowRight, Leaf, Heart, ChefHat } from 'lucide-react';
 import { Button } from '../components/ui/Button';
@@ -23,7 +23,12 @@ export const Home: React.FC = () => {
       description: 'Indulge guilt-free with our selection of nutritious desserts crafted by expert pastry chefs.',
       image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&q=80',
     },
+
   ];
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

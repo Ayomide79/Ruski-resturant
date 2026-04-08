@@ -1,26 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ChefHat, Heart } from 'lucide-react';
 
 export const About: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   return (
     <div className="pt-20">
       {/* Welcome Section */}
       <section className="py-24 bg-slate-50 dark:bg-slate-900 transition-colors overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Image Container - Added relative here and proper structure */}
             <div className="relative">
-              <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
+              {/* Main Image Wrapper with relative positioning */}
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" 
                   alt="Chef preparing food"
-                  className="w-full h-[600px] object-cover"
+                  className="w-full h-[500px] sm:h-[600px] object-cover"
                 />
               </div>
               
-              <div className="absolute -top-8 -left-8 w-64 h-64 bg-amber-500/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-orange-600/20 rounded-full blur-3xl" />
+              {/* Background blur effects */}
+              <div className="absolute -top-8 -left-8 w-64 h-64 bg-amber-500/20 rounded-full blur-3xl -z-10" />
+              <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-orange-600/20 rounded-full blur-3xl -z-10" />
               
-              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl">
+              {/* Experience Badge - Fixed positioning */}
+              <div className="absolute -bottom-6 -right-6 bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-xl z-20 border border-slate-100 dark:border-slate-700">
                 <div className="text-center">
                   <span className="block text-4xl font-bold text-amber-500">25+</span>
                   <span className="text-sm text-slate-600 dark:text-slate-400">Years Experience</span>
@@ -28,7 +37,8 @@ export const About: React.FC = () => {
               </div>
             </div>
 
-            <div className="space-y-6">
+            {/* Content Side */}
+            <div className="space-y-6 lg:pl-8">
               <span className="text-amber-500 font-semibold tracking-wider uppercase text-sm">About Us</span>
               <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 dark:text-white leading-tight">
                 Welcome to <br />
@@ -84,7 +94,7 @@ export const About: React.FC = () => {
             <div className="group">
               <div className="relative overflow-hidden rounded-3xl mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1583394293214-28ez8ac94e4a?w=400&q=80" 
+                  src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
                   alt="Kate Fuson"
                   className="w-full h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />

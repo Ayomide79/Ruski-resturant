@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 
 export const Contact: React.FC = () => {
+      useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="pt-24 pb-24 bg-slate-50 dark:bg-slate-900 transition-colors min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
